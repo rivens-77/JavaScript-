@@ -12,4 +12,9 @@
        
        在输入的时候有个prompt函数；
        a = prompt （“请输入你的名字：”）；
+       console.log （a）；
+       会弹出一个小窗口；请输入你的名字：
+       还有个值为undefined；
        
+       
+   
