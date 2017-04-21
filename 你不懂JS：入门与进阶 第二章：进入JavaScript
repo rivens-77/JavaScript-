@@ -1,1 +1,25 @@
-
+       你不懂JS：入门与进阶 第二章：进入JavaScript
+    1  关于javascript中的几种类型：
+       null， undefined， string， number， boolea, object, symbol;
+       
+       当   var a = null;
+            typeof a;object
+            
+            var a = undefined;
+            typeof a;//undefined
+            
+            typeof a表示a容器中的值得类型为什么类型，而不是a容器是什么类型。
+            
+            
+            var j = {
+                a : 123;
+                b ： “asd”；
+                c ： null；
+            }
+            obj.c； //object
+            obj.a； //123
+            obj.b； //asd
+            当这3个值一起输出的时候只有最后一个值输出。这是为什么？
+            obj["a"];
+            obj["b"];
+            obj["c"];
