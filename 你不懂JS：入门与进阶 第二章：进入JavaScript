@@ -1,5 +1,5 @@
        你不懂JS：入门与进阶 第二章：进入JavaScript
-    1  关于javascript中的几种类型：
+    2.1.1  关于javascript中的几种类型：
        null， undefined， string， number， boolea, object, symbol;
        
        当   var a = null;
@@ -23,3 +23,19 @@
             obj["a"];
             obj["b"];
             obj["c"];
+            
+            当属性名字和外部的名字一样的话。用obj.["属性名称"]比较好，
+            var a = {
+                b : 123,
+                c : "asd",
+            }
+            var c = "b";
+            obj.["c"];//asd
+            obj.[c];//123
+          2.1.2 数组
+          var arr = [ 123, "str", "null", true];
+          arr [ 0 ];//123
+          arr [ 1 ];//"str"
+          arr [ 2 ];//"true"
+          arr [ 3 ];//true
+          typeof arr;//"object"
