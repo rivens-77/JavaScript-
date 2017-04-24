@@ -234,9 +234,21 @@
             }）（；）
             console.log （a）；//值为1
       2.2.7   闭包
-          
+             书上说的方法是：即使函数已经运行完了，他依然还可以“记住”并持续访问函数的作用域。
+             function foo () {
+                var x = 1;
+                function fdd ()
+                 {
+             console.log(x);
+                 }
+                 fdd ();
+}
          
-         
+        foo ();
+      
+VM97:5 1  答案是1  是对的
+undefined   这里为什么是undefined？？？？？？
+       
       
    
              
