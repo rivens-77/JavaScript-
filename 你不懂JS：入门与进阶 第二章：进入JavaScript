@@ -146,6 +146,98 @@
         foo ();
         let 使得 b 只属于if语句内使用。而不是整个foo函数的作用域
    2.2.4 条件
+        if(){
+        你想要输入的代码}
+        else if ()
+        {
+        你想输入的代码
+        }
+        else{你想输入的代码}
+      当条件多了的时候 这个if语句并不合适了那我们会想到 switch语句
+         switch (a){
+               case 2:
+               //做一些很酷的事情
+               break;
+               case 3:
+               //做一些很酷的代码
+               break;
+               default:
+               //备用方案
+        
+         }
+         
+         这种情况和上面的不一样
+         switch (a){
+            case : 2
+            case : 4
+            //做一些很酷的事情
+            break；
+            case 5：
+            break；
+            default：
+            //备用方案
+         }
+         
+         还有一种条件操作符
+         var b = 1；
+         var c = 2；
+         var a = (b > c) ? "world" : "asd";
+         
+    2.2.5 strict 模式
+          在这种模式下面出现的bug会减少很多。
+          如果你在使用strict模式下 在局部函数内想声明 一个变量但是没有使用var等来声明  就会报错。
+          一种是全局模式下的strict
+          还有一种是 函数模式下的strict模式
+          function foo （） {
+          “use strict”
+          var a = 1；
+          return a；
+          }
+         foo ()；
+    2.2.6   函数做为值
+            可以向函数传递一个值，函数也是一个值，他也可以传给其他函数
+            function foo (){
+            }
+            
+            还有一个匿名函数表达式 
+            var a = function ()
+               {
+               };//因为没有名字 而且还复制给a；
+               还有一个是函数命名表达式
+               var c = function foo （）{
+               
+               }
+               函数命名表达式用的比较多，但是匿名函数表达式还是会出现
+               
+              还有一个叫立即被调用的函数表达式//执行函数表达式
+              （function foo（）{}）（）；
+              包括函数的（）是js的微妙的文法
+              （function foo （）{}）（）；后面的（）才是立即执行函数表达式的关键点。
+              
+              function foo （）
+            {}//foo是函数应用表达式 用“（）”即可执行这个函数
+            foo （）；
+            
+            （function foo （）{}）（）；
+            iife 函数表达式   调用“（）” 即可执行函数表达式
+            
+            IIfe还可以作为返回值使用
+            var a = （function foo （）{
+            var b = 1；
+            return b；
+            }）（））；
+            IIFE还可以作为函数，它的函数作用域不影响围围绕它的代码。
+            var a = 42；
+            （function foo （）{
+            var a = 1；
+            console.log （a）；
+            }）（；）
+            console.log （a）；//值为1
+      2.2.7   闭包
+          
+         
+         
+      
    
              
            
