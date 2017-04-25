@@ -242,12 +242,66 @@
              console.log(x);
                  }
                  fdd ();
-}
+      }
          
-        foo ();
+             foo ();
       
-VM97:5 1  答案是1  是对的
-undefined   这里为什么是undefined？？？？？？
+        VM97:5 1  答案是1  是对的
+        undefined   这里为什么是undefined？？？？？？
+    2.2.8 模块
+          
+    2.2.9 this  标识符
+     
+     如何判断this指向哪个object  主要看函数是如何被调用的
+     重要的理解不是指函数本身
+          function foo (){
+       console.log (this.bar);
+}
+var  bar = "asd";
+var obj1 = {
+    bar : "obj1",
+    foo : foo
+};
+var obj2 = {
+    bar : "obj2",
+};
+foo ();
+obj1.foo();
+foo.call (obj1);
+new foo ();
+//asd
+VM251:2 obj1
+VM251:2 obj1
+VM251:2 undefine
+
+2.2.10   原型
+     当你引用一个对象上的属性时，如果这个属性不存在，JavaScript将会自动的使用这个对象内部原型引用来寻找另外一个对象，在它的上面查询你想要的属性。
+     你可以认为它几乎是属性缺失时的备用对象。
+     一个对象到用备用对象的内部原型引用链接发生在这个对象被创建的时候。说明她创建最简单的方法用到的是Object.creat（）的内建工具
+     var foo = {
+           s : 3,
+        
+    };
+    var fdd = Object.create(foo);
+    fdd.s = 1;
+    
+    本来对象上没有s属性，但是通过原型链，fdd对象连接到foo对象上，就在foo对象上找到了s属性。
+    使用这样的行为方式我们称它为 “”行为委托”   就是一个被委托的函数用到另一个函数所需的部分行为上。
+2.2.11  填补
+    一个行的特性（方法）可以在新老版本的流浪器中都可以用，但是这新的特性（方法）比老的更合适或者说更好用。
+    if (!Number.isNaN){
+      Number.isNaN = function (x) {
+       return !x = x;
+      }
+    }
+    如果方法不在 可以添加新的特性。不是所有的新特性和自己设置的特性可以填补，可能引来更多的bug。
+    
+ 2.2.12 转译
+ 2.2.13 非JavaScript
+ 
+    
+    
+    
        
       
    
