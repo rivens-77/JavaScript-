@@ -1,11 +1,12 @@
-   
-      1.你不知道的JavaScript第一章
+# 你不知道的JavaScript第一章
        
    1.1当我们在控制台输入：
+ ```js     
        a = 21;
        b = a * 2;
        console.log (b);
-       结果会输出 42 和一个undefined;  为什么不用alert输出呢？
+ ```
+       在谷歌流浪器的控制台上结果会输出 42 和一个undefined;  为什么不用alert输出呢？
        书中说到:如果用alert（）会在窗口弹出一个界面而看不到undefined，
        用console.log（）会看到更多的值。
        而不干扰浏览器界面。
